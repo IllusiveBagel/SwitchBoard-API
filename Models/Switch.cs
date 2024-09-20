@@ -14,8 +14,14 @@ public class Switch : BaseModel
     public SwitchDesign? SwitchDesign { get; set; }
     [Reference(typeof(SwitchConstruction))]
     public SwitchConstruction? SwitchConstruction { get; set; }
-    [Reference(typeof(SwitchData))]
-    public SwitchData? SwitchData { get; set; }
+    [Column("actuation")]
+    public int Actuation { get; set; }
+    [Column("bottomOut")]
+    public int BottomOut { get; set; }
+    [Column("preTravel")]
+    public int PreTravel { get; set; }
+    [Column("totalTravel")]
+    public int TotalTravel { get; set; }
     [Column("spring")]
     public SpringTypes Spring { get; set; }
     [Column("volume")]
