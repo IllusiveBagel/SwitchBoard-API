@@ -42,6 +42,10 @@
               "target": "Package",
               "version": "[6.5.0, )"
             },
+            "carter": {
+              "target": "Package",
+              "version": "[8.2.1, )"
+            },
             "supabase": {
               "target": "Package",
               "version": "[1.1.1, )"
