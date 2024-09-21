@@ -1,19 +1,21 @@
+using System.Text.Json.Serialization;
 using Supabase.Postgrest.Attributes;
 using Supabase.Postgrest.Models;
 
 namespace SwitchBoard.Models;
 
-[Table("switches")]
+[Table("Switches")]
 public class Switch : BaseModel
 {
     [PrimaryKey("id", false)]
-    public Guid ID { get; set; }
+    public string? ID { get; set; }
     [Column("name")]
     public string? Name { get; set; }
     [Reference(typeof(SwitchDesign))]
-    public SwitchDesign? SwitchDesign { get; set; }
+    
+    public List<SwitchDesign> SwitchDesign { get; set; } = new();
     [Reference(typeof(SwitchConstruction))]
-    public SwitchConstruction? SwitchConstruction { get; set; }
+    public List<SwitchConstruction> SwitchConstruction { get; set; } = new();
     [Column("actuation")]
     public int Actuation { get; set; }
     [Column("bottomOut")]
@@ -23,33 +25,27 @@ public class Switch : BaseModel
     [Column("totalTravel")]
     public int TotalTravel { get; set; }
     [Column("spring")]
-    public SpringTypes Spring { get; set; }
+    public string? Spring { get; set; }
     [Column("volume")]
-    public VolumeTypes Volume { get; set; }
+    public string? Volume { get; set; }
     [Column("type")]
-    public SwitchTypes Type { get; set; }
+    public string? Type { get; set; }
     [Column("factoryLubed")]
     public bool FactoryLubed { get; set; }
 
 }
 
-public enum SpringTypes
-{
-    standard,
-    goldPlated,
-    Symmetric
-}
-
-public enum VolumeTypes
-{
-    standard,
-    loud,
-    quiet
-}
-
-public enum SwitchTypes
-{
-    linear,
-    tactile,
-    clicky
+public class SwitchesResponse {
+    public string? ID { get; set; }
+    public string? Name { get; set; }
+    public List<SwitchDesignResponse>? SwitchDesign { get; set; }
+    public List<SwitchConstructionResponse>? SwitchConstruction { get; set; }
+    public int Actuation { get; set; }
+    public int BottomOut { get; set; }
+    public int PreTravel { get; set; }
+    public int TotalTravel { get; set; }
+    public string? Spring { get; set; }
+    public string? Volume { get; set; }
+    public string? Type { get; set; }
+    public bool FactoryLubed { get; set; }
 }

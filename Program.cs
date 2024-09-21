@@ -1,4 +1,5 @@
-using SwitchBoard.Configuration;
+using SwitchBoard.Extensions;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,3 +10,5 @@ var app = builder.Build();
 app.RegisterMiddlewares();
 
 app.Run();
+
+

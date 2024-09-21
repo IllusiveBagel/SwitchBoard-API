@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.SignalR;
 using Supabase.Postgrest.Attributes;
 using Supabase.Postgrest.Models;
 
@@ -7,19 +8,22 @@ namespace SwitchBoard.Models;
 public class SwitchConstruction : BaseModel
 {
     [PrimaryKey("id", false)]
-    public Guid ID { get; set; }
+    public string? ID { get; set; }
+    [Column("switchId")]
+    public string? SwitchID { get; set; }
     [Column("stem")]
-    public Materials Stem { get; set; }
+    public string? Stem { get; set; }
     [Column("housingTop")]
-    public Materials HousingTop { get; set; }
+    public string? HousingTop { get; set; }
     [Column("housingBottom")]
-    public Materials HousingBottom { get; set; }
+    public string? HousingBottom { get; set; }
 }
 
-public enum Materials
+public class SwitchConstructionResponse 
 {
-    Nylon,
-    POM,
-    PC,
-    Custom
+    public string? ID { get; set; }
+    public string? SwitchID { get; set; }
+    public string? Stem { get; set; }
+    public string? HousingTop { get; set; }
+    public string? HousingBottom { get; set; }
 }
