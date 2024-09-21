@@ -52,6 +52,6 @@ public class Endpoints(Supabase.Client supabase) : CarterModule("api/v1/switches
             }).ToList();
 
             return Results.Ok(switchesResponse);
-        }).RequireAuthorization();
+        });
     }
 }
