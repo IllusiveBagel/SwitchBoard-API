@@ -11,7 +11,6 @@ public class Switch : BaseModel
     [Column("name")]
     public string? Name { get; set; }
     [Reference(typeof(SwitchDesign))]
-    
     public List<SwitchDesign> SwitchDesign { get; set; } = new();
     [Reference(typeof(SwitchConstruction))]
     public List<SwitchConstruction> SwitchConstruction { get; set; } = new();
