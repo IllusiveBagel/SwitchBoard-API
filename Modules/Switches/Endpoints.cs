@@ -1,4 +1,3 @@
-using System.Runtime.CompilerServices;
 using Carter;
 using SwitchBoard.Models;
 
@@ -18,6 +17,7 @@ public class Endpoints(Supabase.Client supabase) : CarterModule("api/v1/switches
             {
                 ID = x.ID,
                 Name = x.Name,
+                // Change these to be a One-to-One reference
                 SwitchDesign = x.SwitchDesign.ConvertAll(y => new SwitchDesignResponse
                 {
                     ID = y.ID,
@@ -52,6 +52,6 @@ public class Endpoints(Supabase.Client supabase) : CarterModule("api/v1/switches
             }).ToList();
 
             return Results.Ok(switchesResponse);
-        });
+        }).RequireAuthorization();
     }
 }

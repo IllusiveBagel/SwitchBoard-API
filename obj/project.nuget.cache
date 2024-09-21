@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "3M/JGeJJY2bJrTrC46QfnB1mBAZU0eAoGyVC5zj6AwyXzSQ7CZFg95u1VxpuHkj8csDABlMZPpdyvO0as4RcIg==",
+  "dgSpecHash": "eYYT1QPAvwA0d5sWKk0OLhqDuEor7nbkPUZoVEoA9dSJr7VuHfbXHiiTmx0USlrq4Z5lmqOuAHun/BfLO0Y3BA==",
   "success": true,
   "projectFilePath": "/home/logan/git/SwitchBoard-API/SwitchBoard.csproj",
   "expectedPackageFiles": [
     "/home/logan/.nuget/packages/carter/8.2.1/carter.8.2.1.nupkg.sha512",
     "/home/logan/.nuget/packages/carter.analyzers/8.2.1/carter.analyzers.8.2.1.nupkg.sha512",
     "/home/logan/.nuget/packages/fluentvalidation/11.8.0/fluentvalidation.11.8.0.nupkg.sha512",
+    "/home/logan/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/8.0.8/microsoft.aspnetcore.authentication.jwtbearer.8.0.8.nupkg.sha512",
     "/home/logan/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.4/microsoft.codeanalysis.analyzers.3.3.4.nupkg.sha512",
     "/home/logan/.nuget/packages/microsoft.codeanalysis.common/4.7.0/microsoft.codeanalysis.common.4.7.0.nupkg.sha512",
     "/home/logan/.nuget/packages/microsoft.codeanalysis.csharp/4.7.0/microsoft.codeanalysis.csharp.4.7.0.nupkg.sha512",
@@ -17,6 +18,8 @@
     "/home/logan/.nuget/packages/microsoft.identitymodel.abstractions/7.5.1/microsoft.identitymodel.abstractions.7.5.1.nupkg.sha512",
     "/home/logan/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.5.1/microsoft.identitymodel.jsonwebtokens.7.5.1.nupkg.sha512",
     "/home/logan/.nuget/packages/microsoft.identitymodel.logging/7.5.1/microsoft.identitymodel.logging.7.5.1.nupkg.sha512",
+    "/home/logan/.nuget/packages/microsoft.identitymodel.protocols/7.1.2/microsoft.identitymodel.protocols.7.1.2.nupkg.sha512",
+    "/home/logan/.nuget/packages/microsoft.identitymodel.protocols.openidconnect/7.1.2/microsoft.identitymodel.protocols.openidconnect.7.1.2.nupkg.sha512",
     "/home/logan/.nuget/packages/microsoft.identitymodel.tokens/7.5.1/microsoft.identitymodel.tokens.7.5.1.nupkg.sha512",
     "/home/logan/.nuget/packages/microsoft.io.recyclablememorystream/3.0.0/microsoft.io.recyclablememorystream.3.0.0.nupkg.sha512",
     "/home/logan/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
