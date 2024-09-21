@@ -31,6 +31,8 @@ public class Switch : BaseModel
     public string? Type { get; set; }
     [Column("factoryLubed")]
     public bool FactoryLubed { get; set; }
+    [Column("authenticated")]
+    public bool Authenticated { get; set; }
 
 }
 
@@ -47,4 +49,5 @@ public class SwitchesResponse {
     public string? Volume { get; set; }
     public string? Type { get; set; }
     public bool FactoryLubed { get; set; }
+    public bool Authenticated { get; set; }
 }

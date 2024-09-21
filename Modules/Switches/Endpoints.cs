@@ -47,7 +47,8 @@ public class Endpoints(Supabase.Client supabase) : CarterModule("api/v1/switches
                 Spring = x.Spring,
                 Volume = x.Volume,
                 Type = x.Type,
-                FactoryLubed = x.FactoryLubed
+                FactoryLubed = x.FactoryLubed,
+                Authenticated = x.Authenticated
             }).ToList();
 
             return Results.Ok(switchesResponse);
