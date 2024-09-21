@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.SignalR;
 using Supabase.Postgrest.Attributes;
 using Supabase.Postgrest.Models;
 
