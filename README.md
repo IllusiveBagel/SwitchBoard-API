@@ -14,6 +14,27 @@ The first section that needs to be configured is the Supabase connection. This s
 
 The next section that needs to be configured is the Authentication section of appsettings. This section has 3 required value: ValidIssuer, ValidAudience and JwtSecret. The Valid Issuer is formatted like ```{Supabase URL}/auth/v1```. The ValidAudience is related to the roles that are assigned to the users for now we only have 1 role ```authenticated```. This value may change in the future. and the final value is the JwtSecret this value can be aquired by going to the SQLEditor in your project and running this code ```show app.settings.jwt_secret``` and that will return your JwtSecret. It's important to keep this value a secret and not commit it anywhere.
 
+```
+{
+  "supabase": {
+    "URL": "{Supabase URL}",
+    "Key": "{Supabase Key}"
+  },
+  "Authentication": {
+    "ValidIssuer": "{Supabase URL}/auth/v1",
+    "ValidAudience": "authenticated",
+    "JwtSecret": "{JwtSecret}"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
+```
+
 Once the appsettings has all those values you're ready to run the code which can be done by running the following line in the command line.
 
 ```dotnet run```
