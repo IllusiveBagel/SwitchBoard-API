@@ -34,7 +34,8 @@ public static class Configuration
             })
             .AddAuthorization()
             .AddSingleton<Supabase.Client>(
-                provider => new Supabase.Client(url, key, options));
+                provider => new Supabase.Client(url, key, options))
+            .AddCors();
 
 
         var bytes = Encoding.UTF8.GetBytes(builder.Configuration["Authentication:JwtSecret"]!);
@@ -43,7 +44,7 @@ public static class Configuration
 
         builder.Services
             .AddAuthentication()
-            .AddJwtBearer(options => 
+            .AddJwtBearer(options =>
             {
                 options.SaveToken = true;
                 options.TokenValidationParameters = new TokenValidationParameters
@@ -72,7 +73,12 @@ public static class Configuration
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "SwitchBoard API V1");
                 })
                 .UseAuthentication()
-                .UseAuthorization();
+                .UseAuthorization()
+                .UseCors(builder => builder
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                );
         }
 
         app.MapCarter();
